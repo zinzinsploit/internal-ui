@@ -126,7 +126,7 @@ Input.BorderSizePixel = 4
 Input.Size = UDim2.new(0, 676, 0, 109999900)
 Input.ClearTextOnFocus = false
 Input.Font = Enum.Font.Roboto
-Input.Text = ""
+Input.Text = "ui made by olynum"
 Input.TextColor3 = Color3.fromRGB(255, 255, 255)
 Input.TextSize = 14.000
 Input.TextTransparency = 1.000
@@ -143,7 +143,7 @@ Display.BorderColor3 = Color3.fromRGB(25, 25, 25)
 Display.BorderSizePixel = 4
 Display.Size = UDim2.new(0, 676, 0, 109999900)
 Display.Font = Enum.Font.Roboto
-Display.Text = ""
+Display.Text = "ui made by olynum"
 Display.TextColor3 = Color3.fromRGB(255, 255, 255)
 Display.TextSize = 16.000
 Display.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
@@ -241,7 +241,7 @@ Hide.Image = "http://www.roblox.com/asset/?id=133232483964165"
 
 -- Scripts:
 
-local function SMML_fake_script() -- Close.Script 
+local function TKOI_fake_script() -- Close.Script 
 	local script = Instance.new('Script', Close)
 
 	local Close = script.Parent
@@ -255,8 +255,8 @@ local function SMML_fake_script() -- Close.Script
 		end
 	end)
 end
-coroutine.wrap(SMML_fake_script)()
-local function RXCTRPA_fake_script() -- Minimize.Script 
+coroutine.wrap(TKOI_fake_script)()
+local function JRVTQH_fake_script() -- Minimize.Script 
 	local script = Instance.new('Script', Minimize)
 
 	local frame = script.Parent.Parent.Parent:WaitForChild('Frame')
@@ -264,8 +264,8 @@ local function RXCTRPA_fake_script() -- Minimize.Script
 		frame.Visible = not frame.Visible
 	end)
 end
-coroutine.wrap(RXCTRPA_fake_script)()
-local function KDRRWI_fake_script() -- ScrollingFrame.RichTextBox 
+coroutine.wrap(JRVTQH_fake_script)()
+local function PPTRHC_fake_script() -- ScrollingFrame.RichTextBox 
 	local script = Instance.new('Script', ScrollingFrame)
 
 	local Margin = script.Parent
@@ -309,31 +309,31 @@ local function KDRRWI_fake_script() -- ScrollingFrame.RichTextBox
 	
 	end)
 end
-coroutine.wrap(KDRRWI_fake_script)()
-local function IJSIFE_fake_script() -- Attach.Script 
+coroutine.wrap(PPTRHC_fake_script)()
+local function OWSUXC_fake_script() -- Attach.Script 
 	local script = Instance.new('Script', Attach)
 
 	script.Parent.MouseButton1Down:Connect(function()
 	end)
 end
-coroutine.wrap(IJSIFE_fake_script)()
-local function JYIQJ_fake_script() -- Clear.Script 
+coroutine.wrap(OWSUXC_fake_script)()
+local function YRYGDB_fake_script() -- Clear.Script 
 	local script = Instance.new('Script', Clear)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.ScrollingFrame.Input.Text = ''
+		script.Parent.Parent.ScrollingFrame.Input.Text = 'ui made by olynum'
 	end)
 end
-coroutine.wrap(JYIQJ_fake_script)()
-local function DMWEK_fake_script() -- Execute.Script 
+coroutine.wrap(YRYGDB_fake_script)()
+local function LZHFVE_fake_script() -- Execute.Script 
 	local script = Instance.new('Script', Execute)
 
 	script.Parent.MouseButton1Down:Connect(function()
 		loadstring(script.Parent.Parent.ScrollingFrame.Input.Text)()
 	end)
 end
-coroutine.wrap(DMWEK_fake_script)()
-local function YXAQXOK_fake_script() -- Frame.Dragify 
+coroutine.wrap(LZHFVE_fake_script)()
+local function BPZKOX_fake_script() -- Frame.Dragify 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService("UserInputService")
@@ -374,8 +374,8 @@ local function YXAQXOK_fake_script() -- Frame.Dragify
 	
 	dragify(script.Parent)
 end
-coroutine.wrap(YXAQXOK_fake_script)()
-local function QLSD_fake_script() -- Hide.Script 
+coroutine.wrap(BPZKOX_fake_script)()
+local function ODTDYRM_fake_script() -- Hide.Script 
 	local script = Instance.new('Script', Hide)
 
 	local frame = script.Parent.Parent.Parent:WaitForChild('Frame')
@@ -383,4 +383,4 @@ local function QLSD_fake_script() -- Hide.Script
 		frame.Visible = not frame.Visible
 	end)
 end
-coroutine.wrap(QLSD_fake_script)()
+coroutine.wrap(ODTDYRM_fake_script)()
