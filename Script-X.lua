@@ -1,3 +1,8 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local ScriptX = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
@@ -19,6 +24,8 @@ local Input = Instance.new("TextBox")
 local Display = Instance.new("TextLabel")
 local MinimizeFrame = Instance.new("Frame")
 local Hide = Instance.new("ImageButton")
+
+--Properties:
 
 ScriptX.Name = "Script-X"
 ScriptX.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -221,7 +228,9 @@ Hide.Position = UDim2.new(-0.0186322536, 0, -0.0118388683, 0)
 Hide.Size = UDim2.new(0, 35, 0, 28)
 Hide.Image = "http://www.roblox.com/asset/?id=133232483964165"
 
-local function GVABWN_fake_script()
+-- Scripts:
+
+local function GVABWN_fake_script() -- Close.Script 
 	local script = Instance.new('Script', Close)
 
 	local Close = script.Parent
@@ -236,7 +245,7 @@ local function GVABWN_fake_script()
 	end)
 end
 coroutine.wrap(GVABWN_fake_script)()
-local function TNQYKVY_fake_script()
+local function TNQYKVY_fake_script() -- Minimize.Script 
 	local script = Instance.new('Script', Minimize)
 
 	local frame = script.Parent.Parent.Parent:WaitForChild('Frame')
@@ -245,7 +254,7 @@ local function TNQYKVY_fake_script()
 	end)
 end
 coroutine.wrap(TNQYKVY_fake_script)()
-local function GDDMO_fake_script() 
+local function GDDMO_fake_script() -- Execute.Script 
 	local script = Instance.new('Script', Execute)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -253,7 +262,7 @@ local function GDDMO_fake_script()
 	end)
 end
 coroutine.wrap(GDDMO_fake_script)()
-local function OWOA_fake_script() 
+local function OWOA_fake_script() -- Clear.Script 
 	local script = Instance.new('Script', Clear)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -261,14 +270,14 @@ local function OWOA_fake_script()
 	end)
 end
 coroutine.wrap(OWOA_fake_script)()
-local function HENW_fake_script()
+local function HENW_fake_script() -- Attach.Script 
 	local script = Instance.new('Script', Attach)
 
 	script.Parent.MouseButton1Down:Connect(function()
 	end)
 end
 coroutine.wrap(HENW_fake_script)()
-local function ROEZHLU_fake_script()
+local function ROEZHLU_fake_script() -- Margin.RichTextBox 
 	local script = Instance.new('Script', Margin)
 
 	local Margin = script.Parent
@@ -313,7 +322,7 @@ local function ROEZHLU_fake_script()
 	end)
 end
 coroutine.wrap(ROEZHLU_fake_script)()
-local function PHKS_fake_script()
+local function PHKS_fake_script() -- Frame.Dragify 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService("UserInputService")
@@ -355,7 +364,7 @@ local function PHKS_fake_script()
 	dragify(script.Parent)
 end
 coroutine.wrap(PHKS_fake_script)()
-local function CGYFWDN_fake_script()
+local function CGYFWDN_fake_script() -- Hide.Script 
 	local script = Instance.new('Script', Hide)
 
 	local frame = script.Parent.Parent.Parent:WaitForChild('Frame')
