@@ -11,17 +11,18 @@ local Close = Instance.new("TextButton")
 local Minimize = Instance.new("TextButton")
 local Highlight = Instance.new("Frame")
 local Margin = Instance.new("Frame")
-local Execute = Instance.new("TextButton")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local Input = Instance.new("TextBox")
+local Display = Instance.new("TextLabel")
+local Attach = Instance.new("TextButton")
 local UICorner = Instance.new("UICorner")
 local ImageLabel_2 = Instance.new("ImageLabel")
 local Clear = Instance.new("TextButton")
 local UICorner_2 = Instance.new("UICorner")
 local ImageLabel_3 = Instance.new("ImageLabel")
-local Attach = Instance.new("TextButton")
+local Execute = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
 local ImageLabel_4 = Instance.new("ImageLabel")
-local Input = Instance.new("TextBox")
-local Display = Instance.new("TextLabel")
 local MinimizeFrame = Instance.new("Frame")
 local Hide = Instance.new("ImageButton")
 
@@ -35,7 +36,7 @@ Frame.Parent = ScriptX
 Frame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.436649978, 0, 0.349502474, 0)
+Frame.Position = UDim2.new(0.481746614, 0, 0.238805965, 0)
 Frame.Size = UDim2.new(0, 707, 0, 301)
 Frame.Visible = false
 
@@ -108,28 +109,70 @@ Margin.BorderColor3 = Color3.fromRGB(0, 2, 112)
 Margin.Position = UDim2.new(0.5, 0, 0.5, 0)
 Margin.Size = UDim2.new(1, -8, 1, -8)
 
-Execute.Name = "Execute"
-Execute.Parent = Margin
-Execute.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-Execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Execute.BorderSizePixel = 0
-Execute.Position = UDim2.new(0.0707213581, 0, 0.853820622, 0)
-Execute.Size = UDim2.new(0, 99, 0, 30)
-Execute.Font = Enum.Font.SourceSans
-Execute.Text = "Execute"
-Execute.TextColor3 = Color3.fromRGB(255, 255, 255)
-Execute.TextSize = 15.000
+ScrollingFrame.Parent = Margin
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Size = UDim2.new(0, 676, 0, 209)
+ScrollingFrame.CanvasSize = UDim2.new(0, 676, 0, 9000)
 
-UICorner.Parent = Execute
+Input.Name = "Input"
+Input.Parent = ScrollingFrame
+Input.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Input.BackgroundTransparency = 1.000
+Input.BorderColor3 = Color3.fromRGB(0, 5, 81)
+Input.BorderSizePixel = 4
+Input.Size = UDim2.new(0, 676, 0, 109999900)
+Input.ClearTextOnFocus = false
+Input.Font = Enum.Font.Roboto
+Input.Text = ""
+Input.TextColor3 = Color3.fromRGB(255, 255, 255)
+Input.TextSize = 14.000
+Input.TextTransparency = 1.000
+Input.TextWrapped = true
+Input.TextXAlignment = Enum.TextXAlignment.Left
+Input.TextYAlignment = Enum.TextYAlignment.Top
 
-ImageLabel_2.Parent = Execute
+Display.Name = "Display"
+Display.Parent = ScrollingFrame
+Display.Active = true
+Display.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Display.BackgroundTransparency = 1.000
+Display.BorderColor3 = Color3.fromRGB(25, 25, 25)
+Display.BorderSizePixel = 4
+Display.Size = UDim2.new(0, 676, 0, 109999900)
+Display.Font = Enum.Font.Roboto
+Display.Text = ""
+Display.TextColor3 = Color3.fromRGB(255, 255, 255)
+Display.TextSize = 16.000
+Display.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Display.TextWrapped = true
+Display.TextXAlignment = Enum.TextXAlignment.Left
+Display.TextYAlignment = Enum.TextYAlignment.Top
+
+Attach.Name = "Attach"
+Attach.Parent = Margin
+Attach.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Attach.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Attach.BorderSizePixel = 0
+Attach.Position = UDim2.new(0.828854322, 0, 0.853820622, 0)
+Attach.Size = UDim2.new(0, 99, 0, 30)
+Attach.Font = Enum.Font.SourceSans
+Attach.Text = "   Attach"
+Attach.TextColor3 = Color3.fromRGB(255, 255, 255)
+Attach.TextSize = 15.000
+
+UICorner.Parent = Attach
+
+ImageLabel_2.Parent = Attach
 ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel_2.BackgroundTransparency = 1.000
 ImageLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel_2.BorderSizePixel = 0
 ImageLabel_2.Position = UDim2.new(0.0909090936, 0, 0.233333334, 0)
 ImageLabel_2.Size = UDim2.new(0, 15, 0, 16)
-ImageLabel_2.Image = "http://www.roblox.com/asset/?id=132934232193152"
+ImageLabel_2.Image = "http://www.roblox.com/asset/?id=94521500078765"
 
 Clear.Name = "Clear"
 Clear.Parent = Margin
@@ -154,60 +197,28 @@ ImageLabel_3.Position = UDim2.new(0.0909090936, 0, 0.233333334, 0)
 ImageLabel_3.Size = UDim2.new(0, 15, 0, 16)
 ImageLabel_3.Image = "http://www.roblox.com/asset/?id=103928140485982"
 
-Attach.Name = "Attach"
-Attach.Parent = Margin
-Attach.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-Attach.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Attach.BorderSizePixel = 0
-Attach.Position = UDim2.new(0.828854322, 0, 0.853820622, 0)
-Attach.Size = UDim2.new(0, 99, 0, 30)
-Attach.Font = Enum.Font.SourceSans
-Attach.Text = "   Attach"
-Attach.TextColor3 = Color3.fromRGB(255, 255, 255)
-Attach.TextSize = 15.000
+Execute.Name = "Execute"
+Execute.Parent = Margin
+Execute.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Execute.BorderSizePixel = 0
+Execute.Position = UDim2.new(0.0707213581, 0, 0.853820622, 0)
+Execute.Size = UDim2.new(0, 99, 0, 30)
+Execute.Font = Enum.Font.SourceSans
+Execute.Text = "Execute"
+Execute.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execute.TextSize = 15.000
 
-UICorner_3.Parent = Attach
+UICorner_3.Parent = Execute
 
-ImageLabel_4.Parent = Attach
+ImageLabel_4.Parent = Execute
 ImageLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel_4.BackgroundTransparency = 1.000
 ImageLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel_4.BorderSizePixel = 0
 ImageLabel_4.Position = UDim2.new(0.0909090936, 0, 0.233333334, 0)
 ImageLabel_4.Size = UDim2.new(0, 15, 0, 16)
-ImageLabel_4.Image = "http://www.roblox.com/asset/?id=94521500078765"
-
-Input.Name = "Input"
-Input.Parent = Margin
-Input.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Input.BackgroundTransparency = 1.000
-Input.BorderColor3 = Color3.fromRGB(0, 5, 81)
-Input.BorderSizePixel = 4
-Input.Size = UDim2.new(0, 676, 0, 209)
-Input.ClearTextOnFocus = false
-Input.Font = Enum.Font.Roboto
-Input.Text = ""
-Input.TextColor3 = Color3.fromRGB(255, 255, 255)
-Input.TextSize = 14.000
-Input.TextTransparency = 1.000
-Input.TextXAlignment = Enum.TextXAlignment.Left
-Input.TextYAlignment = Enum.TextYAlignment.Top
-
-Display.Name = "Display"
-Display.Parent = Margin
-Display.Active = true
-Display.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Display.BackgroundTransparency = 1.000
-Display.BorderColor3 = Color3.fromRGB(25, 25, 25)
-Display.BorderSizePixel = 4
-Display.Size = UDim2.new(0, 676, 0, 209)
-Display.Font = Enum.Font.Roboto
-Display.Text = ""
-Display.TextColor3 = Color3.fromRGB(255, 255, 255)
-Display.TextSize = 16.000
-Display.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-Display.TextXAlignment = Enum.TextXAlignment.Left
-Display.TextYAlignment = Enum.TextYAlignment.Top
+ImageLabel_4.Image = "http://www.roblox.com/asset/?id=132934232193152"
 
 MinimizeFrame.Name = "MinimizeFrame"
 MinimizeFrame.Parent = ScriptX
@@ -230,7 +241,7 @@ Hide.Image = "http://www.roblox.com/asset/?id=133232483964165"
 
 -- Scripts:
 
-local function GVABWN_fake_script() -- Close.Script 
+local function SMML_fake_script() -- Close.Script 
 	local script = Instance.new('Script', Close)
 
 	local Close = script.Parent
@@ -244,8 +255,8 @@ local function GVABWN_fake_script() -- Close.Script
 		end
 	end)
 end
-coroutine.wrap(GVABWN_fake_script)()
-local function TNQYKVY_fake_script() -- Minimize.Script 
+coroutine.wrap(SMML_fake_script)()
+local function RXCTRPA_fake_script() -- Minimize.Script 
 	local script = Instance.new('Script', Minimize)
 
 	local frame = script.Parent.Parent.Parent:WaitForChild('Frame')
@@ -253,32 +264,9 @@ local function TNQYKVY_fake_script() -- Minimize.Script
 		frame.Visible = not frame.Visible
 	end)
 end
-coroutine.wrap(TNQYKVY_fake_script)()
-local function GDDMO_fake_script() -- Execute.Script 
-	local script = Instance.new('Script', Execute)
-
-	script.Parent.MouseButton1Down:Connect(function()
-		loadstring(script.Parent.Parent.Input.Text)()
-	end)
-end
-coroutine.wrap(GDDMO_fake_script)()
-local function OWOA_fake_script() -- Clear.Script 
-	local script = Instance.new('Script', Clear)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Input.Text = ''
-	end)
-end
-coroutine.wrap(OWOA_fake_script)()
-local function HENW_fake_script() -- Attach.Script 
-	local script = Instance.new('Script', Attach)
-
-	script.Parent.MouseButton1Down:Connect(function()
-	end)
-end
-coroutine.wrap(HENW_fake_script)()
-local function ROEZHLU_fake_script() -- Margin.RichTextBox 
-	local script = Instance.new('Script', Margin)
+coroutine.wrap(RXCTRPA_fake_script)()
+local function KDRRWI_fake_script() -- ScrollingFrame.RichTextBox 
+	local script = Instance.new('Script', ScrollingFrame)
 
 	local Margin = script.Parent
 	local Input = Margin:WaitForChild("Input")
@@ -321,8 +309,31 @@ local function ROEZHLU_fake_script() -- Margin.RichTextBox
 	
 	end)
 end
-coroutine.wrap(ROEZHLU_fake_script)()
-local function PHKS_fake_script() -- Frame.Dragify 
+coroutine.wrap(KDRRWI_fake_script)()
+local function IJSIFE_fake_script() -- Attach.Script 
+	local script = Instance.new('Script', Attach)
+
+	script.Parent.MouseButton1Down:Connect(function()
+	end)
+end
+coroutine.wrap(IJSIFE_fake_script)()
+local function JYIQJ_fake_script() -- Clear.Script 
+	local script = Instance.new('Script', Clear)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.ScrollingFrame.Input.Text = ''
+	end)
+end
+coroutine.wrap(JYIQJ_fake_script)()
+local function DMWEK_fake_script() -- Execute.Script 
+	local script = Instance.new('Script', Execute)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(script.Parent.Parent.ScrollingFrame.Input.Text)()
+	end)
+end
+coroutine.wrap(DMWEK_fake_script)()
+local function YXAQXOK_fake_script() -- Frame.Dragify 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService("UserInputService")
@@ -363,8 +374,8 @@ local function PHKS_fake_script() -- Frame.Dragify
 	
 	dragify(script.Parent)
 end
-coroutine.wrap(PHKS_fake_script)()
-local function CGYFWDN_fake_script() -- Hide.Script 
+coroutine.wrap(YXAQXOK_fake_script)()
+local function QLSD_fake_script() -- Hide.Script 
 	local script = Instance.new('Script', Hide)
 
 	local frame = script.Parent.Parent.Parent:WaitForChild('Frame')
@@ -372,4 +383,4 @@ local function CGYFWDN_fake_script() -- Hide.Script
 		frame.Visible = not frame.Visible
 	end)
 end
-coroutine.wrap(CGYFWDN_fake_script)()
+coroutine.wrap(QLSD_fake_script)()
