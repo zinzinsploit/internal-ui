@@ -157,9 +157,9 @@ Attach.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
 Attach.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Attach.BorderSizePixel = 0
 Attach.Position = UDim2.new(0.828854322, 0, 0.853820622, 0)
-Attach.Size = UDim2.new(0, 99, 0, 30)
+Attach.Size = UDim2.new(0, 107, 0, 30)
 Attach.Font = Enum.Font.SourceSans
-Attach.Text = "   Fix Functions"
+Attach.Text = "       Fix Functions"
 Attach.TextColor3 = Color3.fromRGB(255, 255, 255)
 Attach.TextSize = 15.000
 
